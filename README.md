@@ -19,7 +19,7 @@ $ composer require bluora/laravel-datasets-okfn
 
 ## Configuration
 
-Enable this dataset collection by editing config/dataset.php:
+Enable this dataset collection by editing config/datasets.php:
 
 ```php
 return [
