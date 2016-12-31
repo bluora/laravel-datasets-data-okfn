@@ -31,6 +31,13 @@ return [
 ];
 ```
 
+## Available datasets
+
+* Country Codes
+* Country Population
+* Country Population (most recent year)
+* Language Codes
+
 ## Contributing
 
 Please see [CONTRIBUTING](https://github.com/bluora/laravel-datasets/blob/master/CONTRIBUTING.md) for details.
