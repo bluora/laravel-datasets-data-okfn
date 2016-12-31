@@ -33,10 +33,10 @@ return [
 
 ## Available datasets
 
-* Country Codes
-* Country Population
-* Country Population (most recent year)
-* Language Codes
+* Country Codes - (https://github.com/datasets/country-codes)
+* Country Population - (https://github.com/datasets/population)
+* Country Population in the most recent year - (https://github.com/datasets/population)
+* Language Codes - (https://github.com/datasets/language-codes)
 
 ## Contributing
 
