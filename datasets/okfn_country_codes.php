@@ -10,7 +10,7 @@ return [
     'namespace' => 'Bluora\\LaravelDatasetsOkfn\\Migrations',
     'table'     => 'okfn_country_codes',
     'path'      => 'https://github.com/datasets/country-codes/raw/master/data/country-codes.csv',
-    'mapping' => [
+    'mapping'   => [
         'name'                             => 'name',
         'official_name_en'                 => 'official_name_en',
         'official_name_fr'                 => 'official_name_fr',

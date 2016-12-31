@@ -10,7 +10,7 @@ return [
     'namespace' => 'Bluora\\LaravelDatasetsOkfn\\Migrations',
     'table'     => 'okfn_language_codes',
     'path'      => 'https://github.com/datasets/language-codes/raw/master/data/language-codes-full.csv',
-    'mapping' => [
+    'mapping'   => [
         'alpha2'   => 'iso3166_1_alpha_2',
         'alpha3-b' => 'iso3166_1_alpha_3',
         'alpha3-t' => 'iso3166_1_alpha_3t',
