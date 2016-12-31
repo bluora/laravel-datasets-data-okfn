@@ -1,6 +1,6 @@
 <?php
 
-namespace Bluora\LaravelDatasetsDataOkfn\Models;
+namespace Bluora\LaravelDatasetsOkfn\Models;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 

@@ -7,7 +7,7 @@
  */
 
 return [
-    'namespace' => 'Bluora\\LaravelDatasetsDataOkfn\\Migrations',
+    'namespace' => 'Bluora\\LaravelDatasetsOkfn\\Migrations',
     'table'     => 'okfn_country_population',
     'path'      => 'https://github.com/datasets/population/raw/master/data/population.csv',
     'mapping' => [

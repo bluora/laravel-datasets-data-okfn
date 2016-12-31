@@ -1,6 +1,6 @@
 <?php
 
-namespace Bluora\LaravelDatasetsDataOkfn\Migrations;
+namespace Bluora\LaravelDatasetsOkfn\Migrations;
 
 use Bluora\LaravelDatasets\Traits\MigrationsTrait;
 use DB;

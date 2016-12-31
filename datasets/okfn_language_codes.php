@@ -7,7 +7,7 @@
  */
 
 return [
-    'namespace' => 'Bluora\\LaravelDatasetsDataOkfn\\Migrations',
+    'namespace' => 'Bluora\\LaravelDatasetsOkfn\\Migrations',
     'table'     => 'okfn_language_codes',
     'path'      => 'https://github.com/datasets/language-codes/raw/master/data/language-codes-full.csv',
     'mapping' => [
