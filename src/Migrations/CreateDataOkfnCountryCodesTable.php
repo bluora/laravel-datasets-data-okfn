@@ -49,7 +49,7 @@ class CreateDataOkfnCountryCodesTable extends Migration
             $table->string('continent', 2)->default('');
             $table->string('tld', 3)->default('');
             $table->string('languages', 255)->default('');
-            $table->integer('geonameid');
+            $table->integer('geonameid')->default(0);
             $table->string('edgar', 2)->default('');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
