@@ -1,17 +1,17 @@
 {
-    "name": "bluora/laravel-datasets-okfn",
+    "name": "hnhdigital-os/laravel-datasets-okfn",
     "description": "Provides datasets sourced from data.okfn.org.",
     "keywords": ["laravel","datasets","okfn"],
     "license": "MIT",
     "authors": [
         {
             "name": "Rocco Howard",
-            "email": "rocco@bluora.com.au"
+            "email": "rocco@hnh.digital"
         }
     ],
     "require": {
         "php": ">=5.6.0",
-        "bluora/laravel-datasets": "~1.0"
+        "hnhdigital-os/laravel-datasets": "~1.0"
     },
     "autoload": {
         "psr-4": {
