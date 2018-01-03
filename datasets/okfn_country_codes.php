@@ -78,6 +78,6 @@ return [
     ],
     'import_keys' => [
         'name',
-        'official_name_en'
+        'official_name_en',
     ],
 ];
