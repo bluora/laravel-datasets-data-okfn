@@ -11,7 +11,7 @@ return [
     'table'     => 'okfn_country_codes',
     'path'      => 'https://github.com/datasets/country-codes/raw/master/data/country-codes.csv',
     'mapping'   => [
-        'name'                             => 'name',
+        'CLDR display name'                => 'name',
         'official_name_en'                 => 'official_name_en',
         'official_name_fr'                 => 'official_name_fr',
         'ISO3166-1-Alpha-2'                => 'iso3166_1_alpha_2',
@@ -40,19 +40,34 @@ return [
         'EDGAR'                            => 'edgar',
     ],
     'modify' => [
-        'name' => function (&$value, $data_row) {
-            if (empty($value)) {
-                $value = array_get($data_row, 'official_name_en', '');
+        'iso4217_currency_alphabetic_code' => function (&$value, $data_row) {
+            if (!empty($value)) {
+                $value_array = explode(',', $value);
+                $value = $value_array[0];
             }
         },
         'iso4217_currency_minor_unit' => function (&$value, $data_row) {
             if (empty($value)) {
                 $value = 0;
             }
+            if (!empty($value)) {
+                $value_array = explode(',', $value);
+                $value = $value_array[0];
+            }
+        },
+        'iso4217_currency_name' => function (&$value, $data_row) {
+            if (!empty($value)) {
+                $value_array = explode(',', $value);
+                $value = $value_array[0];
+            }
         },
         'iso4217_currency_numeric_code' => function (&$value, $data_row) {
             if (empty($value)) {
                 $value = 0;
+            }
+            if (!empty($value)) {
+                $value_array = explode(',', $value);
+                $value = $value_array[0];
             }
         },
         'geonameid' => function (&$value, $data_row) {
@@ -63,5 +78,6 @@ return [
     ],
     'import_keys' => [
         'name',
+        'official_name_en'
     ],
 ];

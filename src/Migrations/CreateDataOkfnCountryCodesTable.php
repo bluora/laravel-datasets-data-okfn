@@ -2,7 +2,6 @@
 
 namespace Bluora\LaravelDatasetsOkfn\Migrations;
 
-use Bluora\LaravelDatasets\Traits\MigrationsTrait;
 use DB;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -10,20 +9,18 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateDataOkfnCountryCodesTable extends Migration
 {
-    use MigrationsTrait;
-
     protected $table_name = 'data_okfn_country_codes';
+    protected $connection = 'default';
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+    public function up($connection = null)
     {
-        Schema::create($this->table_name, function (Blueprint $table) {
+        Schema::connection(!is_null($connection) ? $connection : $this->connection)->create($this->table_name, function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('uuid', 16);
             $table->string('name', 255)->default('');
             $table->string('official_name_en', 255)->default('');
             $table->string('official_name_fr', 255)->default('');
@@ -56,8 +53,6 @@ class CreateDataOkfnCountryCodesTable extends Migration
             $table->timestamp('archived_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
         });
-
-        self::updateUuid($this->table_name, 'uuid');
     }
 
     /**
@@ -65,9 +60,8 @@ class CreateDataOkfnCountryCodesTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down($connection = null)
     {
-        self::dropUuidTrigger($this->table_name);
-        Schema::drop($this->table_name);
+        Schema::connection(!is_null($connection) ? $connection : $this->connection)->drop($this->table_name);
     }
 }
